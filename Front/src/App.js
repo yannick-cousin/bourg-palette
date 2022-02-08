@@ -46,7 +46,7 @@ function App() {
 						break;
 					case 'ArrowRight':
 						// Faire quelque chose pour la touche "right arrow" pressée.
-						console.log('touche droit');
+						console.log('touche droite');
 						updateX(positionX + 1);
 						break;
 					case 'Enter':
@@ -60,7 +60,6 @@ function App() {
 					default:
 						return; // Quitter lorsque cela ne gère pas l'événement touche.
 				}
-
 				// Annuler l'action par défaut pour éviter qu'elle ne soit traitée deux fois.
 				event.preventDefault();
 			},
