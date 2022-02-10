@@ -1,22 +1,35 @@
 import './App.css';
 import Grid from './components/Grid';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function App() {
 	const [positionX, setPositionX] = useState(0);
 	const [positionY, setPositionY] = useState(0);
-	let temp;
+	const [selectPositionX, setSelectPositionX] = useState(0);
+	const [selectPositionY, setSelectPositionY] = useState(0);
+	const [data, setData] = useState([]);
 
-	const updateX = (x) => {
-		console.log('coucou - x : ', x);
-		setPositionX(x);
+	const updateAllPosition = () => {
+		setPositionX(selectPositionX);
+		setPositionY(selectPositionY);
 	};
 
-	const updateY = (y) => {
-		console.log('coucou - y :', y);
-		setPositionY(y);
+	const changePositionX = (e) => {
+		setSelectPositionX(e.target.value);
 	};
 
+	const changePositionY = (e) => {
+		setSelectPositionY(e.target.value);
+	};
+
+	useEffect(() => {
+		axios
+			.get('http://localhost:3030/bourg')
+			.then((response) => response.data)
+			.then((data) => setData(data));
+	}, []);
+	/*
 	useEffect(() => {
 		console.log('position X :', positionX);
 		console.log('position Y :', positionY);
@@ -67,10 +80,42 @@ function App() {
 		);
 		console.log(`Position X : ${positionX} - Position Y : ${positionY}`);
 	}, [positionX, positionY]);
-
+*/
 	return (
 		<div className="App">
-			<Grid x={positionX} y={positionY} />
+			<div className="grille">
+				<Grid positionX={positionX} positionY={positionY} data={data} />
+			</div>
+			<div className="choice">
+				Position X :{' '}
+				<input
+					type="text"
+					className="inputText buttonConnect"
+					id="gridCo2"
+					name="password"
+					placeholder="Position X"
+					onChange={(e) => changePositionX(e)}
+				></input>{' '}
+				<br />
+				Position Y :{' '}
+				<input
+					type="text"
+					className="inputText buttonConnect"
+					id="gridCo2"
+					name="password"
+					placeholder="Position Y"
+					onChange={(e) => changePositionY(e)}
+				></input>
+				<br />
+				<button
+					type="button"
+					className="buttonConnect"
+					id="gridCo3"
+					onClick={() => updateAllPosition()}
+				>
+					Changer la position
+				</button>
+			</div>
 		</div>
 	);
 }
