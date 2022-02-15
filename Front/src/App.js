@@ -28,79 +28,89 @@ function App() {
 
 	const test = (event) => {
 		let analyst = [];
-		switch (event.key) {
-			case 'ArrowDown':
-				// Faire quelque chose pour la touche "flèche vers le bas" pressée.
-				//console.log('touche bas');
-				setMessageLoad(false);
-				setMessage(null);
-				analyst = data.filter((pos) => pos.positionx === positionX);
-				analyst = analyst.filter((pos) => pos.positiony === positionY + 1);
-				setOrientation(2);
-				if (analyst[0].blocked !== 1) {
-					setPositionY(positionY + 1);
-				}
-				return;
-			case 'ArrowUp':
-				// Faire quelque chose pour la touche "up arrow" pressée.
-				//console.log('touche haut');
-				setMessageLoad(false);
-				setMessage(null);
-				analyst = data.filter((pos) => pos.positionx === positionX);
-				analyst = analyst.filter((pos) => pos.positiony === positionY - 1);
-				setOrientation(3);
-				if (analyst[0].blocked !== 1) {
-					setPositionY(positionY - 1);
-				}
-				if (analyst[0].message !== null) {
-					setMessage(analyst[0].message);
-				}
-				return;
-			case 'ArrowLeft':
-				// Faire quelque chose pour la touche "left arrow" pressée.
-				//console.log('touche gauche');
-				setMessageLoad(false);
-				setMessage(null);
-				analyst = data.filter((pos) => pos.positionx === positionX - 1);
-				analyst = analyst.filter((pos) => pos.positiony === positionY);
-				setOrientation(1);
-				if (analyst[0].blocked !== 1) {
-					setPositionX(positionX - 1);
-				}
-				return;
-			case 'ArrowRight':
-				// Faire quelque chose pour la touche "right arrow" pressée.
-				//console.log('touche droite');
-				setMessageLoad(false);
-				setMessage(null);
-				analyst = data.filter((pos) => pos.positionx === positionX + 1);
-				analyst = analyst.filter((pos) => pos.positiony === positionY);
-				setOrientation(0);
-				if (analyst[0].blocked !== 1) {
-					setPositionX(positionX + 1);
-				}
-				return;
-			case 'Enter':
-				// Faire quelque chose pour les touches "enter" ou "return" pressées.
-				//console.log('Touche Enter - Return');
-				console.log(messageLoad);
-				console.log(orientation);
-				if (orientation === 3 && message !== null && messageLoad === false) {
-					setMessageLoad(true);
-				} else if (orientation === 3 && messageLoad) {
+
+		if (messageLoad) {
+			switch (event.key) {
+				case 'Enter':
 					setMessageLoad(false);
 					setMessage(null);
-				}
-				break;
-			case 'Escape':
-				// Faire quelque chose pour la touche "esc" pressée.
-				//console.log('Touche Escape');
-				break;
-			default:
-				return; // Quitter lorsque cela ne gère pas l'événement touche.
+					break;
+				default:
+					return;
+			}
+		} else {
+			switch (event.key) {
+				case 'ArrowDown':
+					// Faire quelque chose pour la touche "flèche vers le bas" pressée.
+					//console.log('touche bas');
+					setMessageLoad(false);
+					setMessage(null);
+					analyst = data.filter((pos) => pos.positionx === positionX);
+					analyst = analyst.filter((pos) => pos.positiony === positionY + 1);
+					setOrientation(2);
+					if (analyst[0].blocked !== 1) {
+						setPositionY(positionY + 1);
+					}
+					return;
+				case 'ArrowUp':
+					// Faire quelque chose pour la touche "up arrow" pressée.
+					//console.log('touche haut');
+					setMessageLoad(false);
+					setMessage(null);
+					analyst = data.filter((pos) => pos.positionx === positionX);
+					analyst = analyst.filter((pos) => pos.positiony === positionY - 1);
+					setOrientation(3);
+					if (analyst[0].blocked !== 1) {
+						setPositionY(positionY - 1);
+					}
+					if (analyst[0].message !== null) {
+						setMessage(analyst[0].message);
+					}
+					return;
+				case 'ArrowLeft':
+					// Faire quelque chose pour la touche "left arrow" pressée.
+					//console.log('touche gauche');
+					setMessageLoad(false);
+					setMessage(null);
+					analyst = data.filter((pos) => pos.positionx === positionX - 1);
+					analyst = analyst.filter((pos) => pos.positiony === positionY);
+					setOrientation(1);
+					if (analyst[0].blocked !== 1) {
+						setPositionX(positionX - 1);
+					}
+					return;
+				case 'ArrowRight':
+					// Faire quelque chose pour la touche "right arrow" pressée.
+					//console.log('touche droite');
+					setMessageLoad(false);
+					setMessage(null);
+					analyst = data.filter((pos) => pos.positionx === positionX + 1);
+					analyst = analyst.filter((pos) => pos.positiony === positionY);
+					setOrientation(0);
+					if (analyst[0].blocked !== 1) {
+						setPositionX(positionX + 1);
+					}
+					return;
+				case 'Enter':
+					// Faire quelque chose pour les touches "enter" ou "return" pressées.
+					//console.log('Touche Enter - Return');
+					if (orientation === 3 && message !== null && messageLoad === false) {
+						setMessageLoad(true);
+					} else if (orientation === 3 && messageLoad) {
+						setMessageLoad(false);
+						setMessage(null);
+					}
+					break;
+				case 'Escape':
+					// Faire quelque chose pour la touche "esc" pressée.
+					//console.log('Touche Escape');
+					break;
+				default:
+					return; // Quitter lorsque cela ne gère pas l'événement touche.
+			}
+			// Annuler l'action par défaut pour éviter qu'elle ne soit traitée deux fois.
+			event.preventDefault();
 		}
-		// Annuler l'action par défaut pour éviter qu'elle ne soit traitée deux fois.
-		event.preventDefault();
 	};
 
 	useEffect(() => {
