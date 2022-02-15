@@ -4,15 +4,13 @@ import './styles/GridDetail.css';
 
 const GridDetail = ({ positionX, positionY, data }) => {
 	const [image, setImage] = useState('');
-	const [selectData, setSelectData] = useState([]);
 	const [isLoad, setIsLoad] = useState(false);
 
 	useEffect(() => {
 		setIsLoad(false);
 		for (let i = 0; i < data.length; i++) {
 			if (data[i].positionx === positionX && data[i].positiony === positionY) {
-				console.log("It's true");
-				setImage(`http://localhost:3030/public/${data[i].image}`);
+				setImage(`${process.env.REACT_APP_IMAGE_DIRECTORY}/${data[i].image}`);
 				setIsLoad(true);
 			}
 		}

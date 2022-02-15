@@ -251,3 +251,13 @@
 .div81 {
 	grid-area: 9 / 9 / 10 / 10;
 }
+.message {
+	grid-area: 7 / 1 / 10 / 10;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
+	border-radius: 20px;
+	border: solid 2px black;
+}

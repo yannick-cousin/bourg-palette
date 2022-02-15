@@ -1,7 +1,7 @@
 import GridDetail from './GridDetail';
 import './styles/Grid.css';
 
-const Grid = ({ positionX, positionY, data }) => {
+const Grid = ({ positionX, positionY, data, message, messageLoad }) => {
 	return (
 		<div className="lagrille">
 			<div className="parent">
@@ -568,6 +568,7 @@ const Grid = ({ positionX, positionY, data }) => {
 						data={data}
 					/>
 				</div>
+				{messageLoad ? <div className="message">{message}</div> : ''}
 			</div>
 		</div>
 	);
