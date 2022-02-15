@@ -16,11 +16,49 @@ function App() {
 	};
 
 	const changePositionX = (e) => {
-		setSelectPositionX(e.target.value);
+		setSelectPositionX(parseInt(e.target.value));
 	};
 
 	const changePositionY = (e) => {
-		setSelectPositionY(e.target.value);
+		setSelectPositionY(parseInt(e.target.value));
+	};
+
+	const test = (event) => {
+		console.log('poulet', event.key);
+		switch (event.key) {
+			case 'ArrowDown':
+				// Faire quelque chose pour la touche "flèche vers le bas" pressée.
+				console.log('touche bas');
+				setPositionY(positionY + 1);
+				return;
+			case 'ArrowUp':
+				// Faire quelque chose pour la touche "up arrow" pressée.
+				console.log('touche haut');
+				setPositionY(positionY - 1);
+				return;
+			case 'ArrowLeft':
+				// Faire quelque chose pour la touche "left arrow" pressée.
+				console.log('touche gauche');
+				setPositionX(positionX - 1);
+				return;
+			case 'ArrowRight':
+				// Faire quelque chose pour la touche "right arrow" pressée.
+				console.log('touche droite');
+				setPositionX(positionX + 1);
+				return;
+			case 'Enter':
+				// Faire quelque chose pour les touches "enter" ou "return" pressées.
+				console.log('Touche Enter - Return');
+				break;
+			case 'Escape':
+				// Faire quelque chose pour la touche "esc" pressée.
+				console.log('Touche Escape');
+				break;
+			default:
+				return; // Quitter lorsque cela ne gère pas l'événement touche.
+		}
+		// Annuler l'action par défaut pour éviter qu'elle ne soit traitée deux fois.
+		event.preventDefault();
 	};
 
 	useEffect(() => {
@@ -34,7 +72,7 @@ function App() {
 		console.log('position X :', positionX);
 		console.log('position Y :', positionY);
 		window.addEventListener(
-			'keydown',
+			'keyup',
 			(event) => {
 				if (event.defaultPrevented) {
 					return; // Ne devrait rien faire si l'événement de la touche était déjà consommé.
@@ -43,25 +81,23 @@ function App() {
 					case 'ArrowDown':
 						// Faire quelque chose pour la touche "flèche vers le bas" pressée.
 						console.log('touche bas');
-						console.log('position Y dans useEffect :', positionY);
-						updateY(positionY + 1);
-						break;
+						setPositionY(positionY + 1);
+						return;
 					case 'ArrowUp':
 						// Faire quelque chose pour la touche "up arrow" pressée.
 						console.log('touche haut');
-						console.log('position Y dans useEffect :', positionY);
-						updateY(positionY - 1);
-						break;
+						setPositionY(positionY - 1);
+						return;
 					case 'ArrowLeft':
 						// Faire quelque chose pour la touche "left arrow" pressée.
 						console.log('touche gauche');
-						updateX(positionX - 1);
-						break;
+						setPositionX(positionX - 1);
+						return;
 					case 'ArrowRight':
 						// Faire quelque chose pour la touche "right arrow" pressée.
 						console.log('touche droite');
-						updateX(positionX + 1);
-						break;
+						setPositionX(positionX + 1);
+						return;
 					case 'Enter':
 						// Faire quelque chose pour les touches "enter" ou "return" pressées.
 						console.log('Touche Enter - Return');
@@ -78,7 +114,9 @@ function App() {
 			},
 			true
 		);
-		console.log(`Position X : ${positionX} - Position Y : ${positionY}`);
+		return () => {
+			window.removeEventListener('keydown', (event) => event.keycode);
+		};
 	}, [positionX, positionY]);
 */
 	return (
@@ -87,7 +125,7 @@ function App() {
 				<Grid positionX={positionX} positionY={positionY} data={data} />
 			</div>
 			<div className="choice">
-				Position X :{' '}
+				Position X :
 				<input
 					type="text"
 					className="inputText buttonConnect"
@@ -95,9 +133,9 @@ function App() {
 					name="password"
 					placeholder="Position X"
 					onChange={(e) => changePositionX(e)}
-				></input>{' '}
+				></input>
 				<br />
-				Position Y :{' '}
+				Position Y :
 				<input
 					type="text"
 					className="inputText buttonConnect"
@@ -115,6 +153,7 @@ function App() {
 				>
 					Changer la position
 				</button>
+				<input type="textfield" onKeyDown={(e) => test(e)} />
 			</div>
 		</div>
 	);
