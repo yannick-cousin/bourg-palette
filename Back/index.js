@@ -15,14 +15,31 @@ app.use(cors());
 
 app.use('/public', express.static('public'));
 
-app.get('/bourg', (req, res) => {
-	const sql = 'SELECT * FROM bourgpalette';
+app.get('/initial', (req, res) => {
+	let sql = 'SELECT * FROM initial';
 
 	connection.query(sql, (err, result) => {
 		if (err) throw err;
 		return res.status(200).json(result);
 	});
-	console.log('GET on /BourgPalette');
+	console.log(`GET on /Initial`);
+});
+
+app.put('/map', (req, res) => {
+	let sql = 'SELECT * FROM';
+	const value = [req.body.id];
+
+	if (value == 1) {
+		sql += ' bourgpalette';
+	} else if (value == 2) {
+		sql += ' centrepokemon';
+	}
+
+	connection.query(sql, (err, result) => {
+		if (err) throw err;
+		return res.status(200).json(result);
+	});
+	console.log(`GET on /Map/${value}`);
 });
 
 let server = app.listen(3030, () => {

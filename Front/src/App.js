@@ -11,7 +11,9 @@ function App() {
 	const [message, setMessage] = useState(null); //stokage des messages
 	const [messageLoad, setMessageLoad] = useState(false); // Affichage du message
 	const [orientation, setOrientation] = useState(0); //0=>droite, 1=>gauche, 2=>bas, 3=>haut
-	const [data, setData] = useState([]);
+	const [data, setData] = useState([]); //Stokage des données de la map
+	const [choiceMap, setChoiceMap] = useState([]); //Stokage table intial
+	const [isMap, setIsMap] = useState(2);
 
 	const updateAllPosition = () => {
 		setPositionX(selectPositionX);
@@ -51,9 +53,18 @@ function App() {
 					if (analyst[0].blocked !== 1) {
 						setPositionY(positionY + 1);
 					}
+					if (analyst[0].destination !== null) {
+						for (let i = 0; i < choiceMap.length; i++) {
+							if (analyst[0].destination === choiceMap[i].id) {
+								setPositionX(choiceMap[i].start_positionx);
+								setPositionY(choiceMap[i].start_positiony);
+								setIsMap(choiceMap[i].id_map);
+							}
+						}
+					}
 					return;
 				case 'ArrowUp':
-					// Faire quelque chose pour la touche "up arrow" pressée.
+					// Faire quelque chose pour la touche "fléche vers le haut" pressée.
 					//console.log('touche haut');
 					setMessageLoad(false);
 					setMessage(null);
@@ -115,10 +126,19 @@ function App() {
 
 	useEffect(() => {
 		axios
-			.get('http://localhost:3030/bourg')
+			.put(`${process.env.REACT_APP_BACK}/map`, { id: isMap })
 			.then((response) => response.data)
 			.then((data) => setData(data));
+	}, [choiceMap, isMap]);
+
+	useEffect(() => {
+		axios
+			.get(`${process.env.REACT_APP_BACK}/initial`)
+			.then((response) => response.data)
+			.then((data) => setChoiceMap(data));
 	}, []);
+
+	useEffect(() => {}, [data]);
 
 	return (
 		<div className="App">
