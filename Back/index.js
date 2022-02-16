@@ -33,6 +33,8 @@ app.put('/map', (req, res) => {
 		sql += ' bourgpalette';
 	} else if (value == 2) {
 		sql += ' centrepokemon';
+	} else if (value == 3) {
+		sql += ' shop';
 	}
 
 	connection.query(sql, (err, result) => {

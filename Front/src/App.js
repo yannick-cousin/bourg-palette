@@ -65,7 +65,6 @@ function App() {
 					if (analyst[0].destination !== null) {
 						for (let i = 0; i < choiceMap.length; i++) {
 							if (analyst[0].destination === choiceMap[i].id) {
-								console.log(choiceMap[i]);
 								setPositionX(choiceMap[i].start_positionx);
 								setPositionY(choiceMap[i].start_positiony);
 								setIsMap(choiceMap[i].id_map);
@@ -90,7 +89,6 @@ function App() {
 					if (analyst[0].destination !== null) {
 						for (let i = 0; i < choiceMap.length; i++) {
 							if (analyst[0].destination === choiceMap[i].id) {
-								console.log(choiceMap[i]);
 								setPositionX(choiceMap[i].start_positionx);
 								setPositionY(choiceMap[i].start_positiony);
 								setIsMap(choiceMap[i].id_map);
@@ -145,7 +143,6 @@ function App() {
 	};
 
 	useEffect(() => {
-		console.log(choiceMap.length);
 		if (choiceMap.length > 1 && isInit === false) {
 			init();
 			setIsInit(true);
