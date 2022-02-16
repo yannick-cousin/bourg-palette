@@ -13,11 +13,20 @@ function App() {
 	const [orientation, setOrientation] = useState(0); //0=>droite, 1=>gauche, 2=>bas, 3=>haut
 	const [data, setData] = useState([]); //Stokage des données de la map
 	const [choiceMap, setChoiceMap] = useState([]); //Stokage table intial
-	const [isMap, setIsMap] = useState(2);
+	const [isMap, setIsMap] = useState(1); //choix de la map
+	const [isInit, setIsInit] = useState(false);
+
+	//console.log('position X : ', positionX);
+	//console.log('position Y : ', positionY);
 
 	const updateAllPosition = () => {
 		setPositionX(selectPositionX);
 		setPositionY(selectPositionY);
+	};
+
+	const init = () => {
+		setPositionX(choiceMap[0].start_positionx);
+		setPositionY(choiceMap[0].start_positiony);
 	};
 
 	const changePositionX = (e) => {
@@ -56,6 +65,7 @@ function App() {
 					if (analyst[0].destination !== null) {
 						for (let i = 0; i < choiceMap.length; i++) {
 							if (analyst[0].destination === choiceMap[i].id) {
+								console.log(choiceMap[i]);
 								setPositionX(choiceMap[i].start_positionx);
 								setPositionY(choiceMap[i].start_positiony);
 								setIsMap(choiceMap[i].id_map);
@@ -76,6 +86,16 @@ function App() {
 					}
 					if (analyst[0].message !== null) {
 						setMessage(analyst[0].message);
+					}
+					if (analyst[0].destination !== null) {
+						for (let i = 0; i < choiceMap.length; i++) {
+							if (analyst[0].destination === choiceMap[i].id) {
+								console.log(choiceMap[i]);
+								setPositionX(choiceMap[i].start_positionx);
+								setPositionY(choiceMap[i].start_positiony);
+								setIsMap(choiceMap[i].id_map);
+							}
+						}
 					}
 					return;
 				case 'ArrowLeft':
@@ -125,11 +145,18 @@ function App() {
 	};
 
 	useEffect(() => {
+		console.log(choiceMap.length);
+		if (choiceMap.length > 1 && isInit === false) {
+			init();
+			setIsInit(true);
+		}
 		axios
 			.put(`${process.env.REACT_APP_BACK}/map`, { id: isMap })
 			.then((response) => response.data)
 			.then((data) => setData(data));
 	}, [choiceMap, isMap]);
+
+	useEffect(() => {}, [data]);
 
 	useEffect(() => {
 		axios
@@ -137,8 +164,6 @@ function App() {
 			.then((response) => response.data)
 			.then((data) => setChoiceMap(data));
 	}, []);
-
-	useEffect(() => {}, [data]);
 
 	return (
 		<div className="App">

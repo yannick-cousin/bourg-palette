@@ -261,4 +261,6 @@
 	border-radius: 40px;
 	border: solid 2px black;
 	font-family: 'Pokemon';
+	/*white-space: nowrap;*/
+	word-wrap: break-word;
 }
