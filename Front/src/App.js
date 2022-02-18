@@ -10,13 +10,13 @@ function App() {
 	const [selectPositionY, setSelectPositionY] = useState(0); //utiliser lors des tests
 	const [message, setMessage] = useState(null); //stokage des messages
 	const [messageLoad, setMessageLoad] = useState(false); // Affichage du message
-	const [orientation, setOrientation] = useState(0); //0=>droite, 1=>gauche, 2=>bas, 3=>haut
+	const [orientation, setOrientation] = useState(2); //0=>droite, 1=>gauche, 2=>face, 3=>dos
 	const [data, setData] = useState([]); //Stokage des données de la map
 	const [choiceMap, setChoiceMap] = useState([]); //Stokage table intial
 	const [isMap, setIsMap] = useState(1); //choix de la map
 	const [isInit, setIsInit] = useState(false);
 
-	//console.log('position X : ', positionX);
+	//console.log('Orientation : ', orientation);
 	//console.log('position Y : ', positionY);
 
 	const updateAllPosition = () => {
@@ -171,6 +171,7 @@ function App() {
 					data={data}
 					message={message}
 					messageLoad={messageLoad}
+					orientation={orientation}
 				/>
 			</div>
 			<div className="choice">

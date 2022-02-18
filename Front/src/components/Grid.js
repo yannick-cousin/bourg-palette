@@ -1,7 +1,33 @@
 import GridDetail from './GridDetail';
+import { useEffect, useState } from 'react';
 import './styles/Grid.css';
+import face from './assets/face.png';
+import droite from './assets/droite.png';
+import gauche from './assets/gauche.png';
+import dos from './assets/dos.png';
 
-const Grid = ({ positionX, positionY, data, message, messageLoad }) => {
+const Grid = ({
+	positionX,
+	positionY,
+	data,
+	message,
+	messageLoad,
+	orientation,
+}) => {
+	const [perso, setPerso] = useState(face);
+
+	useEffect(() => {
+		if (orientation === 0) {
+			setPerso(droite);
+		} else if (orientation === 1) {
+			setPerso(gauche);
+		} else if (orientation === 2) {
+			setPerso(face);
+		} else if (orientation === 3) {
+			setPerso(dos);
+		}
+	}, [orientation]);
+
 	return (
 		<div className="lagrille">
 			<div className="parent">
@@ -286,6 +312,7 @@ const Grid = ({ positionX, positionY, data, message, messageLoad }) => {
 					/>
 				</div>
 				<div className="centre">
+					<img src={perso} alt="perso" id="perso" />
 					<GridDetail positionX={positionX} positionY={positionY} data={data} />
 				</div>
 				<div className="div42">

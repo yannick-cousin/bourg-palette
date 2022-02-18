@@ -128,8 +128,20 @@
 	grid-area: 5 / 4 / 6 / 5;
 }
 .centre {
+	display: flex;
+	justify-content: center;
+	/*align-items: center;*/
 	grid-area: 5 / 5 / 6 / 6;
-	border: solid 1px red;
+	/*position: absolute;*/
+	/*border: solid 1px red;*/
+	width: 64px;
+}
+#perso {
+	position: absolute;
+	z-index: 1;
+	height: 64px;
+	/*width: 64px;*/
+	/*top: -5px;*/
 }
 .div42 {
 	grid-area: 5 / 6 / 6 / 7;
