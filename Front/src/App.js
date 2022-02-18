@@ -169,7 +169,9 @@ function App() {
 					<div className="ontop"></div>
 				</div>
 				<div className="center">
-					<div className="onleft"></div>
+					<div className="onleft">
+						<div className="onleftop"></div>
+					</div>
 					<div className="grille">
 						<Grid
 							positionX={positionX}
@@ -180,9 +182,16 @@ function App() {
 							orientation={orientation}
 						/>
 					</div>
-					<div className="onright"></div>
+					<div className="onright">
+						<div className="onrightop"></div>
+					</div>
 				</div>
-
+				<div className="foot">
+					<div className="onfoot"></div>
+				</div>
+				<br />
+				<br />
+				<div className="explications"></div>
 				<div className="choice">
 					Position X :
 					<input

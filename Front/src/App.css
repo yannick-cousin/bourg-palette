@@ -20,10 +20,10 @@
 	/*display: flex;
 	justify-content: center;
 	align-items: flex-end;*/
-	border-radius: 10px 10px 0px 0px;
+	border-radius: 20px 20px 0px 0px;
 	background-color: rgb(25, 25, 25);
 	height: 50px;
-	width: 580px;
+	width: 680px;
 	/*bottom: 0;*/
 	z-index: 1;
 }
@@ -43,13 +43,52 @@
 
 .onleft {
 	display: flex;
+	justify-content: flex-end;
 	background-color: gray;
 	height: 580px;
 	width: 198px;
 }
 
+.onleftop {
+	display: flex;
+	background-color: rgb(25, 25, 25);
+	height: 580px;
+	width: 50px;
+}
+
 .onright {
 	background-color: gray;
+	justify-content: flex-start;
 	height: 580px;
 	width: 198px;
+}
+
+.onrightop {
+	display: flex;
+	background-color: rgb(25, 25, 25);
+	height: 580px;
+	width: 50px;
+}
+
+.foot {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	background-color: gray;
+	height: 150px;
+	width: 976px;
+	border-radius: 0px 0px 40px 40px;
+}
+
+.onfoot {
+	position: relative;
+	/*display: flex;
+	justify-content: center;
+	align-items: flex-end;*/
+	border-radius: 0px 0px 20px 20px;
+	background-color: rgb(25, 25, 25);
+	height: 50px;
+	width: 680px;
+	/*bottom: 0;*/
+	z-index: 1;
 }
