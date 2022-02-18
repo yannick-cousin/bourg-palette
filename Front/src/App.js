@@ -152,9 +152,9 @@ function App() {
 			.then((response) => response.data)
 			.then((data) => setData(data));
 	}, [choiceMap, isMap]);
-
+	/*
 	useEffect(() => {}, [data]);
-
+*/
 	useEffect(() => {
 		axios
 			.get(`${process.env.REACT_APP_BACK}/initial`)
@@ -164,47 +164,57 @@ function App() {
 
 	return (
 		<div className="App">
-			<div className="grille">
-				<Grid
-					positionX={positionX}
-					positionY={positionY}
-					data={data}
-					message={message}
-					messageLoad={messageLoad}
-					orientation={orientation}
-				/>
-			</div>
-			<div className="choice">
-				Position X :
-				<input
-					type="text"
-					className="inputText buttonConnect"
-					id="gridCo2"
-					name="password"
-					placeholder="Position X"
-					onChange={(e) => changePositionX(e)}
-				></input>
-				<br />
-				Position Y :
-				<input
-					type="text"
-					className="inputText buttonConnect"
-					id="gridCo2"
-					name="password"
-					placeholder="Position Y"
-					onChange={(e) => changePositionY(e)}
-				></input>
-				<br />
-				<button
-					type="button"
-					className="buttonConnect"
-					id="gridCo3"
-					onClick={() => updateAllPosition()}
-				>
-					Changer la position
-				</button>
-				<br />
-				<input type="textfield" onKeyDown={(e) => test(e)} />
+			<div className="ensemble">
+				<div className="top">
+					<div className="ontop"></div>
+				</div>
+				<div className="center">
+					<div className="onleft"></div>
+					<div className="grille">
+						<Grid
+							positionX={positionX}
+							positionY={positionY}
+							data={data}
+							message={message}
+							messageLoad={messageLoad}
+							orientation={orientation}
+						/>
+					</div>
+					<div className="onright"></div>
+				</div>
+
+				<div className="choice">
+					Position X :
+					<input
+						type="text"
+						className="inputText buttonConnect"
+						id="gridCo2"
+						name="password"
+						placeholder="Position X"
+						onChange={(e) => changePositionX(e)}
+					></input>
+					<br />
+					Position Y :
+					<input
+						type="text"
+						className="inputText buttonConnect"
+						id="gridCo2"
+						name="password"
+						placeholder="Position Y"
+						onChange={(e) => changePositionY(e)}
+					></input>
+					<br />
+					<button
+						type="button"
+						className="buttonConnect"
+						id="gridCo3"
+						onClick={() => updateAllPosition()}
+					>
+						Changer la position
+					</button>
+					<br />
+					<input type="textfield" onKeyDown={(e) => test(e)} />
+				</div>
 			</div>
 		</div>
 	);
