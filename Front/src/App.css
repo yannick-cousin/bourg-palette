@@ -5,6 +5,16 @@
 	text-align: center;
 }
 
+.coteacote {
+	display: flex;
+}
+
+.titre {
+	font-size: 2.5em;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-family: 'Pokemon';
+}
 .top {
 	display: flex;
 	justify-content: center;
@@ -14,33 +24,24 @@
 	width: 976px;
 	border-radius: 40px 40px 0px 0px;
 }
-
 .ontop {
 	position: relative;
-	/*display: flex;
-	justify-content: center;
-	align-items: flex-end;*/
 	border-radius: 20px 20px 0px 0px;
 	background-color: rgb(25, 25, 25);
 	height: 50px;
 	width: 680px;
-	/*bottom: 0;*/
 	z-index: 1;
 }
-
 .center {
 	display: flex;
 	flex-direction: row;
-	/*justify-content: center;*/
 	align-items: center;
 }
-
 .grille {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
 .onleft {
 	display: flex;
 	justify-content: flex-end;
@@ -48,28 +49,24 @@
 	height: 580px;
 	width: 198px;
 }
-
 .onleftop {
 	display: flex;
 	background-color: rgb(25, 25, 25);
 	height: 580px;
 	width: 50px;
 }
-
 .onright {
 	background-color: gray;
 	justify-content: flex-start;
 	height: 580px;
 	width: 198px;
 }
-
 .onrightop {
 	display: flex;
 	background-color: rgb(25, 25, 25);
 	height: 580px;
 	width: 50px;
 }
-
 .foot {
 	display: flex;
 	justify-content: center;
@@ -79,16 +76,86 @@
 	width: 976px;
 	border-radius: 0px 0px 40px 40px;
 }
-
 .onfoot {
 	position: relative;
-	/*display: flex;
-	justify-content: center;
-	align-items: flex-end;*/
 	border-radius: 0px 0px 20px 20px;
 	background-color: rgb(25, 25, 25);
 	height: 50px;
 	width: 680px;
-	/*bottom: 0;*/
+
 	z-index: 1;
+}
+input {
+	z-index: -5;
+}
+
+.explications {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	grid-template-columns: repeat(7, 75px);
+	grid-template-rows: repeat(4, 75px);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	margin-left: 30px;
+}
+
+.touchehaut {
+	grid-area: 1 / 2 / 2 / 3;
+	background-color: rgb(41, 41, 41);
+	border-radius: 10px 10px 0px 0px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.touchegauche {
+	grid-area: 2 / 1 / 3 / 2;
+	background-color: rgb(41, 41, 41);
+	border-radius: 10px 0px 0px 10px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.manette {
+	grid-area: 2 / 2 / 3 / 3;
+	background-color: rgb(41, 41, 41);
+}
+.touchedroite {
+	grid-area: 2 / 3 / 3 / 4;
+	background-color: rgb(41, 41, 41);
+	border-radius: 0px 10px 10px 0px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.touchebas {
+	grid-area: 3 / 2 / 4 / 3;
+	background-color: rgb(41, 41, 41);
+	border-radius: 0px 0px 10px 10px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.enter {
+	grid-area: 2 / 6 / 3 / 7;
+	border-radius: 40px 40px 40px 40px;
+	background-color: rgb(189, 61, 157);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+.fleches {
+	grid-area: 4 / 1 / 5 / 4;
+	margin-top: 20px;
+	font-size: 1.25em;
+}
+.enterplease {
+	grid-area: 4 / 5 / 5 / 8;
+	margin-top: 20px;
+	font-size: 1.25em;
 }

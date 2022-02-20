@@ -16,25 +16,9 @@ function App() {
 	const [isMap, setIsMap] = useState(1); //choix de la map
 	const [isInit, setIsInit] = useState(false);
 
-	//console.log('Orientation : ', orientation);
-	//console.log('position Y : ', positionY);
-
-	const updateAllPosition = () => {
-		setPositionX(selectPositionX);
-		setPositionY(selectPositionY);
-	};
-
 	const init = () => {
 		setPositionX(choiceMap[0].start_positionx);
 		setPositionY(choiceMap[0].start_positiony);
-	};
-
-	const changePositionX = (e) => {
-		setSelectPositionX(parseInt(e.target.value));
-	};
-
-	const changePositionY = (e) => {
-		setSelectPositionY(parseInt(e.target.value));
 	};
 
 	const test = (event) => {
@@ -164,65 +148,65 @@ function App() {
 
 	return (
 		<div className="App">
-			<div className="ensemble">
-				<div className="top">
-					<div className="ontop"></div>
-				</div>
-				<div className="center">
-					<div className="onleft">
-						<div className="onleftop"></div>
+			<div className="titre">Balade à Bourg-Palette</div>
+			<div className="coteacote">
+				<div className="ensemble">
+					<div className="top">
+						<div className="ontop"></div>
 					</div>
-					<div className="grille">
-						<Grid
-							positionX={positionX}
-							positionY={positionY}
-							data={data}
-							message={message}
-							messageLoad={messageLoad}
-							orientation={orientation}
-						/>
+					<div className="center">
+						<div className="onleft">
+							<div className="onleftop"></div>
+						</div>
+						<div className="grille">
+							<Grid
+								positionX={positionX}
+								positionY={positionY}
+								data={data}
+								message={message}
+								messageLoad={messageLoad}
+								orientation={orientation}
+							/>
+						</div>
+						<div className="onright">
+							<div className="onrightop"></div>
+						</div>
 					</div>
-					<div className="onright">
-						<div className="onrightop"></div>
+					<div className="foot">
+						<div className="onfoot">
+							<input
+								type="textfield"
+								autoFocus="true"
+								onKeyDown={(e) => test(e)}
+							/>
+						</div>
 					</div>
 				</div>
-				<div className="foot">
-					<div className="onfoot"></div>
-				</div>
-				<br />
-				<br />
-				<div className="explications"></div>
-				<div className="choice">
-					Position X :
-					<input
-						type="text"
-						className="inputText buttonConnect"
-						id="gridCo2"
-						name="password"
-						placeholder="Position X"
-						onChange={(e) => changePositionX(e)}
-					></input>
-					<br />
-					Position Y :
-					<input
-						type="text"
-						className="inputText buttonConnect"
-						id="gridCo2"
-						name="password"
-						placeholder="Position Y"
-						onChange={(e) => changePositionY(e)}
-					></input>
-					<br />
-					<button
-						type="button"
-						className="buttonConnect"
-						id="gridCo3"
-						onClick={() => updateAllPosition()}
-					>
-						Changer la position
-					</button>
-					<br />
-					<input type="textfield" onKeyDown={(e) => test(e)} />
+				<div className="explications">
+					<div className="touchehaut">
+						<i className="fa-solid fa-angle-up"></i>
+					</div>
+					<div className="touchegauche">
+						<i className="fa-solid fa-angle-left"></i>
+					</div>
+					<div className="manette"></div>
+					<div className="touchedroite">
+						<i className="fa-solid fa-angle-right"></i>
+					</div>
+					<div className="touchebas">
+						<i className="fa-solid fa-angle-down"></i>
+					</div>
+					<div className="fleches">
+						Utiliser les touches directionnels de votre clavier pour diriger
+						votre personnage.
+					</div>
+					<div className="enter">
+						<i className="fa-solid fa-arrow-right-to-bracket"></i>
+					</div>
+					<div className="enterplease">
+						Utiliser la touche entrée pour intéragir avec certains éléments du
+						décor.
+					</div>
 				</div>
 			</div>
 		</div>
