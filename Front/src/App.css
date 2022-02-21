@@ -3,6 +3,7 @@
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
+	width: 1550px;
 }
 
 .coteacote {
@@ -158,4 +159,36 @@ input {
 	grid-area: 4 / 5 / 5 / 8;
 	margin-top: 20px;
 	font-size: 1.25em;
+}
+
+.tonecran {
+	display: none;
+}
+
+@media screen and (max-width: 1400px) {
+	.tonecran {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.5em;
+		margin-top: 50px;
+	}
+	.App {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		width: 100%;
+	}
+	.coteacote {
+		display: none;
+	}
+	.titre {
+		font-size: 2.5em;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-family: 'Pokemon';
+		justify-content: center;
+	}
 }

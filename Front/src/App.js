@@ -149,6 +149,7 @@ function App() {
 	return (
 		<div className="App">
 			<div className="titre">Balade à Bourg-Palette</div>
+			<div className="tonecran">Veuillez passer sur un écran plus grand</div>
 			<div className="coteacote">
 				<div className="ensemble">
 					<div className="top">
