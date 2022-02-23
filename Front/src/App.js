@@ -21,9 +21,90 @@ function App() {
 		setPositionY(choiceMap[0].start_positiony);
 	};
 
+	const versLeHaut = () => {
+		let analyst = [];
+		setMessageLoad(false);
+		setMessage(null);
+		analyst = data.filter((pos) => pos.positionx === positionX);
+		analyst = analyst.filter((pos) => pos.positiony === positionY - 1);
+		setOrientation(3);
+		if (analyst[0].blocked !== 1) {
+			setPositionY(positionY - 1);
+		}
+		if (analyst[0].message !== null) {
+			setMessage(analyst[0].message);
+		}
+		if (analyst[0].destination !== null) {
+			for (let i = 0; i < choiceMap.length; i++) {
+				if (analyst[0].destination === choiceMap[i].id) {
+					setPositionX(choiceMap[i].start_positionx);
+					setPositionY(choiceMap[i].start_positiony);
+					setIsMap(choiceMap[i].id_map);
+				}
+			}
+		}
+	};
+
+	const versLeBas = () => {
+		let analyst = [];
+		setMessageLoad(false);
+		setMessage(null);
+		analyst = data.filter((pos) => pos.positionx === positionX);
+		analyst = analyst.filter((pos) => pos.positiony === positionY + 1);
+		setOrientation(2);
+		if (analyst[0].blocked !== 1) {
+			setPositionY(positionY + 1);
+		}
+		if (analyst[0].destination !== null) {
+			for (let i = 0; i < choiceMap.length; i++) {
+				if (analyst[0].destination === choiceMap[i].id) {
+					setPositionX(choiceMap[i].start_positionx);
+					setPositionY(choiceMap[i].start_positiony);
+					setIsMap(choiceMap[i].id_map);
+				}
+			}
+		}
+	};
+
+	const versLaGauche = () => {
+		let analyst = [];
+		setMessageLoad(false);
+		setMessage(null);
+		analyst = data.filter((pos) => pos.positionx === positionX - 1);
+		analyst = analyst.filter((pos) => pos.positiony === positionY);
+		setOrientation(1);
+		if (analyst[0].blocked !== 1) {
+			setPositionX(positionX - 1);
+		}
+	};
+
+	const versLaDroite = () => {
+		let analyst = [];
+		setMessageLoad(false);
+		setMessage(null);
+		analyst = data.filter((pos) => pos.positionx === positionX + 1);
+		analyst = analyst.filter((pos) => pos.positiony === positionY);
+		setOrientation(0);
+		if (analyst[0].blocked !== 1) {
+			setPositionX(positionX + 1);
+		}
+	};
+
+	const toucheEntree = () => {
+		if (orientation === 3 && message !== null && messageLoad === false) {
+			setMessageLoad(true);
+		} else if (orientation === 3 && messageLoad) {
+			setMessageLoad(false);
+			setMessage(null);
+		}
+	};
+
+	const onFocus = () => {
+		document.getElementById('clavier').focus();
+	};
+
 	const test = (event) => {
 		let analyst = [];
-
 		if (messageLoad) {
 			switch (event.key) {
 				case 'Enter':
@@ -82,7 +163,6 @@ function App() {
 					return;
 				case 'ArrowLeft':
 					// Faire quelque chose pour la touche "left arrow" pressée.
-					//console.log('touche gauche');
 					setMessageLoad(false);
 					setMessage(null);
 					analyst = data.filter((pos) => pos.positionx === positionX - 1);
@@ -94,7 +174,6 @@ function App() {
 					return;
 				case 'ArrowRight':
 					// Faire quelque chose pour la touche "right arrow" pressée.
-					//console.log('touche droite');
 					setMessageLoad(false);
 					setMessage(null);
 					analyst = data.filter((pos) => pos.positionx === positionX + 1);
@@ -106,7 +185,6 @@ function App() {
 					return;
 				case 'Enter':
 					// Faire quelque chose pour les touches "enter" ou "return" pressées.
-					//console.log('Touche Enter - Return');
 					if (orientation === 3 && message !== null && messageLoad === false) {
 						setMessageLoad(true);
 					} else if (orientation === 3 && messageLoad) {
@@ -116,7 +194,6 @@ function App() {
 					break;
 				case 'Escape':
 					// Faire quelque chose pour la touche "esc" pressée.
-					//console.log('Touche Escape');
 					break;
 				default:
 					return; // Quitter lorsque cela ne gère pas l'événement touche.
@@ -136,9 +213,7 @@ function App() {
 			.then((response) => response.data)
 			.then((data) => setData(data));
 	}, [choiceMap, isMap]);
-	/*
-	useEffect(() => {}, [data]);
-*/
+
 	useEffect(() => {
 		axios
 			.get(`${process.env.REACT_APP_BACK}/initial`)
@@ -151,6 +226,25 @@ function App() {
 			<div className="titre">Balade à Bourg-Palette</div>
 			<div className="tonecran">Veuillez passer sur un écran plus grand</div>
 			<div className="coteacote">
+				<div className="croix">
+					<div class="touchehaut" onClick={() => versLeHaut()}>
+						<i class="fa-solid fa-angle-up" />
+					</div>
+					<div class="touchegauche" onClick={() => versLaGauche()}>
+						<i class="fa-solid fa-angle-left" />
+					</div>
+					<div class="central"> </div>
+					<div class="touchedroite" onClick={() => versLaDroite()}>
+						<i class="fa-solid fa-angle-right" />
+					</div>
+					<div class="touchebas" onClick={() => versLeBas()}>
+						<i class="fa-solid fa-angle-down" />
+					</div>
+					<div class="explicationfleche">
+						Utiliser les touches directionnels de votre clavier pour diriger
+						votre personnage ou bien la croix directionnel juste au-dessus.
+					</div>
+				</div>
 				<div className="ensemble">
 					<div className="top">
 						<div className="ontop"></div>
@@ -178,35 +272,26 @@ function App() {
 							<input
 								type="textfield"
 								autoFocus="true"
+								id="clavier"
 								onKeyDown={(e) => test(e)}
 							/>
 						</div>
 					</div>
 				</div>
-				<div className="explications">
-					<div className="touchehaut">
-						<i className="fa-solid fa-angle-up"></i>
+				<div class="boutons">
+					<div class="boutonclavier" onClick={() => onFocus()}>
+						<i class="fa-solid fa-keyboard" />
 					</div>
-					<div className="touchegauche">
-						<i className="fa-solid fa-angle-left"></i>
+					<div class="boutonentree" onClick={() => toucheEntree()}>
+						<i className="fa-solid fa-arrow-right-to-bracket" />
 					</div>
-					<div className="manette"></div>
-					<div className="touchedroite">
-						<i className="fa-solid fa-angle-right"></i>
+					<div class="txtclavier">
+						Appuyer sur cet touche pour pouvoir utiliser les touches
+						directionnels de votre clavier
 					</div>
-					<div className="touchebas">
-						<i className="fa-solid fa-angle-down"></i>
-					</div>
-					<div className="fleches">
-						Utiliser les touches directionnels de votre clavier pour diriger
-						votre personnage.
-					</div>
-					<div className="enter">
-						<i className="fa-solid fa-arrow-right-to-bracket"></i>
-					</div>
-					<div className="enterplease">
-						Utiliser la touche entrée pour intéragir avec certains éléments du
-						décor.
+					<div class="txtentree">
+						Appuyer sur la touche entrée ou sur cet touche pour intéragir avec
+						certains élements du décor.
 					</div>
 				</div>
 			</div>
