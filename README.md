@@ -1,6 +1,6 @@
 # Balade à Bourg-Palette
 
-Balade à Bourg-Palette vous permettra de vous balader sur une map dans le style de Pokémon ainsi que de visiter le centre Pokémon et la boutique. Vous pouvez utiliser soit votre claver soit les touches qui sont à l'écran.
+Balade à Bourg-Palette vous permettra de vous balader sur une map dans le style de Pokémon ainsi que de visiter le centre Pokémon et la boutique. Vous pouvez utiliser, soit votre claver, soit les touches qui sont à l'écran.
 
 Cela a été rendu possible grâce à React, Express et MySQL.
 
