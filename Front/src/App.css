@@ -18,7 +18,7 @@
 	display: none;
 }
 
-@media screen and (min-width: 926px) {
+@media screen and (min-width: 700px) {
 	.App {
 		display: flex;
 		flex-direction: column;
@@ -31,7 +31,7 @@
 		align-items: center;
 	}
 	.titre {
-		font-size: 1.25em;
+		font-size: 0.9em;
 		font-family: 'Pokemon';
 	}
 	.top {
@@ -157,8 +157,9 @@
 		grid-area: 4 / 1 / 6 / 4;
 		display: flex;
 		justify-content: center;
-		width: 200px;
+		width: 150px;
 		margin-top: 20px;
+		font-size: 0.85em;
 	}
 	.boutonsgrand {
 		display: none;
@@ -186,6 +187,7 @@
 	}
 	.txtentree {
 		grid-area: 3 / 1 / 5 / 4;
+		font-size: 0.85em;
 	}
 	.tonecran {
 		display: none;

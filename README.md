@@ -16,6 +16,8 @@ N'oubliez pas d'installer les dépendances et de remplir les variables d'environ
 
 ![bourg1](./images/bourg-palette.png)
 
+![bourg3](./images/anime.gif)
+
 ![bourg2](./images/bourg-mobile.png)
 
 Enjoy !
