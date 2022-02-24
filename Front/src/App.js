@@ -278,7 +278,8 @@ function App() {
 						</div>
 					</div>
 				</div>
-				<div class="boutons">
+				{/*boutons grand écrans*/}
+				<div class="boutonsgrand">
 					<div class="boutonclavier" onClick={() => onFocus()}>
 						<i class="fa-solid fa-keyboard" />
 					</div>
@@ -288,6 +289,16 @@ function App() {
 					<div class="txtclavier">
 						Appuyer sur cet touche pour pouvoir utiliser les touches
 						directionnels de votre clavier
+					</div>
+					<div class="txtentree">
+						Appuyer sur la touche entrée ou sur cet touche pour intéragir avec
+						certains élements du décor.
+					</div>
+				</div>
+				{/* Version petit écran*/}
+				<div class="boutonspetit">
+					<div class="boutonentree" onClick={() => toucheEntree()}>
+						<i className="fa-solid fa-arrow-right-to-bracket" />
 					</div>
 					<div class="txtentree">
 						Appuyer sur la touche entrée ou sur cet touche pour intéragir avec

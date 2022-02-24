@@ -24,7 +24,6 @@
 		flex-direction: column;
 		justify-content: center;
 		text-align: center;
-		/*width: 926px;*/
 	}
 	.coteacote {
 		display: flex;
@@ -33,8 +32,6 @@
 	}
 	.titre {
 		font-size: 1.25em;
-		/*margin-top: 10px;*/
-		/*margin-bottom: 10px;*/
 		font-family: 'Pokemon';
 	}
 	.top {
@@ -52,7 +49,6 @@
 		background-color: rgb(25, 25, 25);
 		height: 5px;
 		width: 302px;
-		/*z-index: 1;*/
 	}
 	.center {
 		display: flex;
@@ -123,7 +119,7 @@
 		justify-content: center;
 		align-items: center;
 		background-color: rgba(0, 0, 0, 0.8);
-		border-radius: 5px 5px 0px 0px;
+		border-radius: 10px 10px 0px 0px;
 		color: white;
 	}
 	.touchegauche {
@@ -132,7 +128,7 @@
 		justify-content: center;
 		align-items: center;
 		background-color: rgba(0, 0, 0, 0.8);
-		border-radius: 5px 0px 0px 5px;
+		border-radius: 10px 0px 0px 10px;
 		color: white;
 	}
 	.central {
@@ -145,7 +141,7 @@
 		justify-content: center;
 		align-items: center;
 		background-color: rgba(0, 0, 0, 0.8);
-		border-radius: 0px 5px 5px 0px;
+		border-radius: 0px 10px 10px 0px;
 		color: white;
 	}
 	.touchebas {
@@ -154,7 +150,7 @@
 		justify-content: center;
 		align-items: center;
 		background-color: rgba(0, 0, 0, 0.8);
-		border-radius: 0px 0px 5px 5px;
+		border-radius: 0px 0px 10px 10px;
 		color: white;
 	}
 	.explicationfleche {
@@ -164,39 +160,117 @@
 		width: 200px;
 		margin-top: 20px;
 	}
-	.boutons {
+	.boutonsgrand {
+		display: none;
+	}
+	.boutonspetit {
 		display: grid;
-		grid-template-columns: repeat(6, 48px);
-		grid-template-rows: repeat(5, 48px);
+		grid-template-columns: repeat(3, 80px);
+		grid-template-rows: repeat(4, 80px);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+	}
+
+	.boutonentree {
+		grid-area: 1 / 2 / 2 / 3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 40px 40px 40px 40px;
+		background-color: rgb(189, 61, 157);
+		color: white;
+		font-size: 2em;
+	}
+	.boutonentree:hover {
+		background-color: rgba(189, 61, 157, 0.7);
+	}
+	.txtentree {
+		grid-area: 3 / 1 / 5 / 4;
+	}
+	.tonecran {
+		display: none;
+	}
+	.touchehaut:hover {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	.touchegauche:hover {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	.touchedroite:hover {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	.touchebas:hover {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.boutonspetit {
+		display: none;
+	}
+	.tonecran {
+		display: none;
+	}
+	.boutonsgrand {
+		display: grid;
+		grid-template-columns: repeat(6, 80px);
+		grid-template-rows: repeat(5, 80px);
 		grid-column-gap: 0px;
 		grid-row-gap: 0px;
 	}
 	.boutonclavier {
-		/*grid-area: 2 / 2 / 3 / 3;*/
-		display: none;
+		grid-area: 2 / 2 / 3 / 3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 40px 40px 40px 40px;
+		background-color: rgb(189, 61, 157);
+		color: white;
+		font-size: 2em;
+	}
+	.boutonclavier:hover {
+		background-color: rgba(189, 61, 157, 0.7);
 	}
 	.boutonentree {
 		grid-area: 2 / 4 / 3 / 5;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-radius: 24px 24px 24px 24px;
+		border-radius: 40px 40px 40px 40px;
 		background-color: rgb(189, 61, 157);
 		color: white;
+		font-size: 2em;
+	}
+	.boutonentree:hover {
+		background-color: rgba(189, 61, 157, 0.7);
 	}
 	.txtclavier {
-		/*grid-area: 4 / 1 / 6 / 4;*/
-		display: none;
-	}
-	.txtentree {
-		grid-area: 4 / 4 / 6 / 7;
+		grid-area: 4 / 1 / 6 / 3;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
 		text-align: justify;
+		font-size: 1.5em;
 	}
-	.tonecran {
-		display: none;
+	.txtentree {
+		grid-area: 4 / 4 / 6 / 6;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		text-align: justify;
+		font-size: 1.5em;
+	}
+	.touchehaut:hover {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	.touchegauche:hover {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	.touchedroite:hover {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	.touchebas:hover {
+		background-color: rgba(0, 0, 0, 0.5);
 	}
 }
 
@@ -216,9 +290,8 @@
 	.titre {
 		display: flex;
 		font-size: 2.5em;
-		/*margin-top: 10px;*/
-		/*margin-bottom: 10px;*/
 		font-family: 'Pokemon';
+		margin: 30px;
 	}
 	.top {
 		display: flex;
@@ -235,7 +308,6 @@
 		background-color: rgb(25, 25, 25);
 		height: 20px;
 		width: 620px;
-		/*z-index: 1;*/
 	}
 	.center {
 		display: flex;
@@ -310,6 +382,9 @@
 		color: white;
 		font-size: 1.5em;
 	}
+	.touchehaut:hover {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
 	.touchegauche {
 		grid-area: 2 / 1 / 3 / 2;
 		display: flex;
@@ -319,6 +394,9 @@
 		border-radius: 20px 0px 0px 20px;
 		color: white;
 		font-size: 1.5em;
+	}
+	.touchegauche:hover {
+		background-color: rgba(0, 0, 0, 0.5);
 	}
 	.central {
 		grid-area: 2 / 2 / 3 / 3;
@@ -334,6 +412,9 @@
 		color: white;
 		font-size: 1.5em;
 	}
+	.touchedroite:hover {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
 	.touchebas {
 		grid-area: 3 / 2 / 4 / 3;
 		display: flex;
@@ -344,14 +425,18 @@
 		color: white;
 		font-size: 1.5em;
 	}
+	.touchebas:hover {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
 	.explicationfleche {
 		grid-area: 4 / 1 / 6 / 4;
 		display: flex;
 		justify-content: center;
 		width: 200px;
 		margin-top: 20px;
+		font-size: 1.5em;
 	}
-	.boutons {
+	.boutonsgrand {
 		display: grid;
 		grid-template-columns: repeat(6, 80px);
 		grid-template-rows: repeat(5, 80px);
@@ -368,6 +453,9 @@
 		color: white;
 		font-size: 2em;
 	}
+	.boutonclavier:hover {
+		background-color: rgba(189, 61, 157, 0.7);
+	}
 	.boutonentree {
 		grid-area: 2 / 4 / 3 / 5;
 		display: flex;
@@ -377,6 +465,9 @@
 		background-color: rgb(189, 61, 157);
 		color: white;
 		font-size: 2em;
+	}
+	.boutonentree:hover {
+		background-color: rgba(189, 61, 157, 0.7);
 	}
 	.txtclavier {
 		grid-area: 4 / 1 / 6 / 3;
@@ -393,6 +484,9 @@
 		align-items: center;
 		text-align: justify;
 		font-size: 1.5em;
+	}
+	.boutonspetit {
+		display: none;
 	}
 	.tonecran {
 		display: none;
