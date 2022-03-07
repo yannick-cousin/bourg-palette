@@ -241,8 +241,8 @@ function App() {
 						<i class="fa-solid fa-angle-down" />
 					</div>
 					<div class="explicationfleche">
-						Utiliser les touches directionnels de votre clavier pour diriger
-						votre personnage ou bien la croix directionnel juste au-dessus.
+						Utiliser les touches directionnelles de votre clavier pour diriger
+						votre personnage ou bien la croix directionnelle juste au-dessus.
 					</div>
 				</div>
 				<div className="ensemble">
@@ -287,11 +287,11 @@ function App() {
 						<i className="fa-solid fa-arrow-right-to-bracket" />
 					</div>
 					<div class="txtclavier">
-						Appuyer sur cet touche pour pouvoir utiliser les touches
-						directionnels de votre clavier
+						Appuyer sur cette touche pour pouvoir utiliser les touches
+						directionnelles de votre clavier
 					</div>
 					<div class="txtentree">
-						Appuyer sur la touche entrée ou sur cet touche pour intéragir avec
+						Appuyer sur la touche entrée ou sur cette touche pour intéragir avec
 						certains élements du décor.
 					</div>
 				</div>
