@@ -7,23 +7,11 @@ const path = require('path'),
 
 let mainWindow;
 
+const isMac = process.platform === 'darwin';
+
 const createWindow = () => {
 	mainWindow = new BrowserWindow({ width: 1980, height: 1080 });
 	// const appUrl = 'http://localhost:3000';
-
-	// 	ipcMain.handle('dark-mode:toggle', () => {
-	//     if (nativeTheme.shouldUseDarkColors) {
-	//       nativeTheme.themeSource = 'light'
-	//     } else {
-	//       nativeTheme.themeSource = 'dark'
-	//     }
-	//     return nativeTheme.shouldUseDarkColors
-	//   })
-
-	//   ipcMain.handle('dark-mode:system', () => {
-	//     nativeTheme.themeSource = 'system'
-	//   })
-	// }
 
 	const appUrl = isDev
 		? 'http://localhost:3000'
