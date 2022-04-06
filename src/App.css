@@ -144,6 +144,7 @@
 		background-color: rgba(0, 0, 0, 0.8);
 		border-radius: 10px 10px 0px 0px;
 		color: white;
+		transition: 0.5s;
 	}
 
 	.touchegauche {
@@ -154,6 +155,7 @@
 		background-color: rgba(0, 0, 0, 0.8);
 		border-radius: 10px 0px 0px 10px;
 		color: white;
+		transition: 0.5s;
 	}
 	.central {
 		grid-area: 2 / 2 / 3 / 3;
@@ -167,6 +169,7 @@
 		background-color: rgba(0, 0, 0, 0.8);
 		border-radius: 0px 10px 10px 0px;
 		color: white;
+		transition: 0.5s;
 	}
 	.touchebas {
 		grid-area: 3 / 2 / 4 / 3;
@@ -176,6 +179,7 @@
 		background-color: rgba(0, 0, 0, 0.8);
 		border-radius: 0px 0px 10px 10px;
 		color: white;
+		transition: 0.5s;
 	}
 
 	@media (prefers-color-scheme: dark) {
@@ -420,6 +424,7 @@
 		border-radius: 20px 20px 0px 0px;
 		color: white;
 		font-size: 1.5em;
+		transition: 0.5s;
 	}
 	.touchehaut:hover {
 		background-color: rgba(0, 0, 0, 0.5);
@@ -433,6 +438,7 @@
 		border-radius: 20px 0px 0px 20px;
 		color: white;
 		font-size: 1.5em;
+		transition: 0.5s;
 	}
 	.touchegauche:hover {
 		background-color: rgba(0, 0, 0, 0.5);
@@ -450,6 +456,7 @@
 		border-radius: 0px 20px 20px 0px;
 		color: white;
 		font-size: 1.5em;
+		transition: 0.5s;
 	}
 	.touchedroite:hover {
 		background-color: rgba(0, 0, 0, 0.5);
@@ -463,6 +470,7 @@
 		border-radius: 0px 0px 20px 20px;
 		color: white;
 		font-size: 1.5em;
+		transition: 0.5s;
 	}
 	.touchebas:hover {
 		background-color: rgba(0, 0, 0, 0.5);
