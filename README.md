@@ -1,16 +1,14 @@
-# Balade à Bourg-Palette
+# Balade à Bourg-Palette version 2 !
 
 Balade à Bourg-Palette vous permettra de vous balader sur une map dans le style de Pokémon ainsi que de visiter le centre Pokémon et la boutique. Vous pouvez utiliser, soit votre clavier, soit les touches qui sont à l'écran.
 
-Cela a été rendu possible grâce à React, Express et MySQL.
+Cela a été rendu possible grâce à React !
+Une version sans avoir besoin de back-end et de base de données.
+Par ailleurs, un dark-mode a été ajouté.
 
 ![React](./images/react_2.png)
-![NODEJS](./images/node_2.png)
-![Express](./images/express_2.png)
-![MYSQL](./images/mysql_2.png)
 
-Deux dossiers : le front-end et la back-end. Dans le back est fourni la base de donnée MySQL. Je vous recommande vivement d'utiliser MySQL Workbench pour son installation.
-N'oubliez pas d'installer les dépendances et de remplir les variables d'environnements.
+Pour le fonctionnement, n'oubliez pas d'installer les dépendances.
 
 # Quelques images
 
