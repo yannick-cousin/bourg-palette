@@ -1,0 +1,5 @@
+[{"id":1, "start_positionx":7, "start_positiony":6, "map":"bourgpalette", "id_map":1},
+ {"id":2, "start_positionx":7, "start_positiony":8, "map":"centrepokemon", "id_map":2},
+ {"id":3, "start_positionx":8, "start_positiony":-1, "map":"bourgpalette", "id_map":1},
+ {"id":4, "start_positionx":4, "start_positiony":8, "map":"shop", "id_map":3},
+ {"id":5, "start_positionx":-9, "start_positiony":5, "map":"bourgpalette", "id_map":1}]

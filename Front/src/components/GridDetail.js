@@ -10,7 +10,8 @@ const GridDetail = ({ positionX, positionY, data }) => {
 		setIsLoad(false);
 		for (let i = 0; i < data.length; i++) {
 			if (data[i].positionx === positionX && data[i].positiony === positionY) {
-				setImage(`${process.env.REACT_APP_IMAGE_DIRECTORY}/${data[i].image}`);
+				// setImage(`${process.env.REACT_APP_IMAGE_DIRECTORY}/${data[i].image}`);
+				setImage(`${process.env.PUBLIC_URL}/${data[i].image}`);
 				setIsLoad(true);
 			}
 		}

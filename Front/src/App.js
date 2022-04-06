@@ -1,7 +1,11 @@
-import './App.css';
+import axios from 'axios';
+import bourgpalette from './components/assets/bourgpalette.json';
+import centrepokemon from './components/assets/centrepokemon.json';
+import initial from './components/assets/initial.json';
+import shop from './components/assets/shop.json';
 import Grid from './components/Grid';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import './App.css';
 
 function App() {
 	const [positionX, setPositionX] = useState(0); //position X du joueur
@@ -12,7 +16,7 @@ function App() {
 	const [messageLoad, setMessageLoad] = useState(false); // Affichage du message
 	const [orientation, setOrientation] = useState(2); //0=>droite, 1=>gauche, 2=>face, 3=>dos
 	const [data, setData] = useState([]); //Stokage des données de la map
-	const [choiceMap, setChoiceMap] = useState([]); //Stokage table intial
+	const [choiceMap, setChoiceMap] = useState([]); //Stokage table initial
 	const [isMap, setIsMap] = useState(1); //choix de la map
 	const [isInit, setIsInit] = useState(false);
 
@@ -208,17 +212,27 @@ function App() {
 			init();
 			setIsInit(true);
 		}
-		axios
-			.put(`${process.env.REACT_APP_BACK}/map`, { id: isMap })
-			.then((response) => response.data)
-			.then((data) => setData(data));
+		// axios
+		// 	.put(`${process.env.REACT_APP_BACK}/map`, { id: isMap })
+		// 	.then((response) => response.data)
+		// 	.then((data) => setData(data));
+		// setData(data)
+
+		if (isMap === 1) {
+			setData(bourgpalette);
+		} else if (isMap === 2) {
+			setData(centrepokemon);
+		} else if (isMap === 3) {
+			setData(shop);
+		}
 	}, [choiceMap, isMap]);
 
 	useEffect(() => {
-		axios
-			.get(`${process.env.REACT_APP_BACK}/initial`)
-			.then((response) => response.data)
-			.then((data) => setChoiceMap(data));
+		// axios
+		// 	.get(`${process.env.REACT_APP_BACK}/initial`)
+		// 	.then((response) => response.data)
+		// 	.then((data) => setChoiceMap(data));
+		setChoiceMap(initial);
 	}, []);
 
 	return (
