@@ -19,14 +19,14 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  body { 
-		background: #222; 
-		color: white; 
+	body {
+		background: #222;
+		color: white;
 	}
-	.touchebas, 
-	.touchehaut, 
-	.touchegauche, 
-	.touchedroite, 
+	.touchebas,
+	.touchehaut,
+	.touchegauche,
+	.touchedroite,
 	.central {
 		background-color: white;
 		color: black;
@@ -34,12 +34,11 @@
 }
 
 @media (prefers-color-scheme: light) {
-  body { 
-		background: #fff; 
-		color: black; 
+	body {
+		background: #fff;
+		color: black;
 	}
 }
-
 
 @media screen and (min-width: 700px) {
 	.App {
@@ -317,7 +316,6 @@
 }
 
 @media screen and (min-width: 1920px) {
-	
 	.App {
 		display: flex;
 		flex-direction: column;
