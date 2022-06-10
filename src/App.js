@@ -154,6 +154,8 @@ function App() {
 					}
 					if (analyst[0].message !== null) {
 						setMessage(analyst[0].message);
+					} else {
+						setMessage(null);
 					}
 					if (analyst[0].destination !== null) {
 						for (let i = 0; i < choiceMap.length; i++) {
