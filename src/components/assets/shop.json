@@ -4,7 +4,7 @@
 		"positionx": 1,
 		"positiony": 1,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/1-1.png",
 		"destination": 0
 	},
@@ -13,7 +13,7 @@
 		"positionx": 2,
 		"positiony": 1,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/1-2.png",
 		"destination": 0
 	},
@@ -22,7 +22,7 @@
 		"positionx": 3,
 		"positiony": 1,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/1-3.png",
 		"destination": 0
 	},
@@ -31,7 +31,7 @@
 		"positionx": 4,
 		"positiony": 1,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/1-4.png",
 		"destination": 0
 	},
@@ -40,7 +40,7 @@
 		"positionx": 5,
 		"positiony": 1,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/1-5.png",
 		"destination": 0
 	},
@@ -49,7 +49,7 @@
 		"positionx": 6,
 		"positiony": 1,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/1-6.png",
 		"destination": 0
 	},
@@ -58,7 +58,7 @@
 		"positionx": 7,
 		"positiony": 1,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/1-7.png",
 		"destination": 0
 	},
@@ -67,7 +67,7 @@
 		"positionx": 8,
 		"positiony": 1,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/1-8.png",
 		"destination": 0
 	},
@@ -76,7 +76,7 @@
 		"positionx": 9,
 		"positiony": 1,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/1-9.png",
 		"destination": 0
 	},
@@ -85,7 +85,7 @@
 		"positionx": 10,
 		"positiony": 1,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/1-10.png",
 		"destination": 0
 	},
@@ -94,7 +94,7 @@
 		"positionx": 11,
 		"positiony": 1,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/1-11.png",
 		"destination": 0
 	},
@@ -103,7 +103,7 @@
 		"positionx": 1,
 		"positiony": 2,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/2-1.png",
 		"destination": 0
 	},
@@ -112,7 +112,7 @@
 		"positionx": 2,
 		"positiony": 2,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/2-2.png",
 		"destination": 0
 	},
@@ -121,7 +121,7 @@
 		"positionx": 3,
 		"positiony": 2,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/2-3.png",
 		"destination": 0
 	},
@@ -130,7 +130,7 @@
 		"positionx": 4,
 		"positiony": 2,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/2-4.png",
 		"destination": 0
 	},
@@ -139,7 +139,7 @@
 		"positionx": 5,
 		"positiony": 2,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/2-5.png",
 		"destination": 0
 	},
@@ -148,7 +148,7 @@
 		"positionx": 6,
 		"positiony": 2,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/2-6.png",
 		"destination": 0
 	},
@@ -157,7 +157,7 @@
 		"positionx": 7,
 		"positiony": 2,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/2-7.png",
 		"destination": 0
 	},
@@ -166,7 +166,7 @@
 		"positionx": 8,
 		"positiony": 2,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/2-8.png",
 		"destination": 0
 	},
@@ -175,7 +175,7 @@
 		"positionx": 9,
 		"positiony": 2,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/2-9.png",
 		"destination": 0
 	},
@@ -184,7 +184,7 @@
 		"positionx": 10,
 		"positiony": 2,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/2-10.png",
 		"destination": 0
 	},
@@ -193,7 +193,7 @@
 		"positionx": 11,
 		"positiony": 2,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/2-11.png",
 		"destination": 0
 	},
@@ -202,7 +202,7 @@
 		"positionx": 1,
 		"positiony": 3,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/3-1.png",
 		"destination": 0
 	},
@@ -211,7 +211,7 @@
 		"positionx": 2,
 		"positiony": 3,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/3-2.png",
 		"destination": 0
 	},
@@ -220,7 +220,7 @@
 		"positionx": 3,
 		"positiony": 3,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/3-3.png",
 		"destination": 0
 	},
@@ -229,7 +229,7 @@
 		"positionx": 4,
 		"positiony": 3,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/3-4.png",
 		"destination": 0
 	},
@@ -238,7 +238,7 @@
 		"positionx": 5,
 		"positiony": 3,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/3-5.png",
 		"destination": 0
 	},
@@ -247,7 +247,7 @@
 		"positionx": 6,
 		"positiony": 3,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/3-6.png",
 		"destination": 0
 	},
@@ -256,7 +256,7 @@
 		"positionx": 7,
 		"positiony": 3,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/3-7.png",
 		"destination": 0
 	},
@@ -265,7 +265,7 @@
 		"positionx": 8,
 		"positiony": 3,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/3-8.png",
 		"destination": 0
 	},
@@ -274,7 +274,7 @@
 		"positionx": 9,
 		"positiony": 3,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/3-9.png",
 		"destination": 0
 	},
@@ -283,7 +283,7 @@
 		"positionx": 10,
 		"positiony": 3,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/3-10.png",
 		"destination": 0
 	},
@@ -292,7 +292,7 @@
 		"positionx": 11,
 		"positiony": 3,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/3-11.png",
 		"destination": 0
 	},
@@ -301,7 +301,7 @@
 		"positionx": 1,
 		"positiony": 4,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/4-1.png",
 		"destination": 0
 	},
@@ -310,7 +310,7 @@
 		"positionx": 2,
 		"positiony": 4,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/4-2.png",
 		"destination": 0
 	},
@@ -319,7 +319,7 @@
 		"positionx": 3,
 		"positiony": 4,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/4-3.png",
 		"destination": 0
 	},
@@ -328,7 +328,7 @@
 		"positionx": 4,
 		"positiony": 4,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/4-4.png",
 		"destination": 0
 	},
@@ -337,7 +337,7 @@
 		"positionx": 5,
 		"positiony": 4,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/4-5.png",
 		"destination": 0
 	},
@@ -346,7 +346,7 @@
 		"positionx": 6,
 		"positiony": 4,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/4-6.png",
 		"destination": 0
 	},
@@ -355,7 +355,7 @@
 		"positionx": 7,
 		"positiony": 4,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/4-7.png",
 		"destination": 0
 	},
@@ -364,7 +364,7 @@
 		"positionx": 8,
 		"positiony": 4,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/4-8.png",
 		"destination": 0
 	},
@@ -373,7 +373,7 @@
 		"positionx": 9,
 		"positiony": 4,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/4-9.png",
 		"destination": 0
 	},
@@ -382,7 +382,7 @@
 		"positionx": 10,
 		"positiony": 4,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/4-10.png",
 		"destination": 0
 	},
@@ -391,7 +391,7 @@
 		"positionx": 11,
 		"positiony": 4,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/4-11.png",
 		"destination": 0
 	},
@@ -400,7 +400,7 @@
 		"positionx": 1,
 		"positiony": 5,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/5-1.png",
 		"destination": 0
 	},
@@ -409,7 +409,7 @@
 		"positionx": 2,
 		"positiony": 5,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/5-2.png",
 		"destination": 0
 	},
@@ -418,7 +418,7 @@
 		"positionx": 3,
 		"positiony": 5,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/5-3.png",
 		"destination": 0
 	},
@@ -427,7 +427,7 @@
 		"positionx": 4,
 		"positiony": 5,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/5-4.png",
 		"destination": 0
 	},
@@ -436,7 +436,7 @@
 		"positionx": 5,
 		"positiony": 5,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/5-5.png",
 		"destination": 0
 	},
@@ -445,7 +445,7 @@
 		"positionx": 6,
 		"positiony": 5,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/5-6.png",
 		"destination": 0
 	},
@@ -454,7 +454,7 @@
 		"positionx": 7,
 		"positiony": 5,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/5-7.png",
 		"destination": 0
 	},
@@ -463,7 +463,7 @@
 		"positionx": 8,
 		"positiony": 5,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/5-8.png",
 		"destination": 0
 	},
@@ -472,7 +472,7 @@
 		"positionx": 9,
 		"positiony": 5,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/5-9.png",
 		"destination": 0
 	},
@@ -481,7 +481,7 @@
 		"positionx": 10,
 		"positiony": 5,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/5-10.png",
 		"destination": 0
 	},
@@ -490,7 +490,7 @@
 		"positionx": 11,
 		"positiony": 5,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/5-11.png",
 		"destination": 0
 	},
@@ -499,7 +499,7 @@
 		"positionx": 1,
 		"positiony": 6,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/6-1.png",
 		"destination": 0
 	},
@@ -508,7 +508,7 @@
 		"positionx": 2,
 		"positiony": 6,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/6-2.png",
 		"destination": 0
 	},
@@ -517,7 +517,7 @@
 		"positionx": 3,
 		"positiony": 6,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/6-3.png",
 		"destination": 0
 	},
@@ -526,7 +526,7 @@
 		"positionx": 4,
 		"positiony": 6,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/6-4.png",
 		"destination": 0
 	},
@@ -535,7 +535,7 @@
 		"positionx": 5,
 		"positiony": 6,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/6-5.png",
 		"destination": 0
 	},
@@ -544,7 +544,7 @@
 		"positionx": 6,
 		"positiony": 6,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/6-6.png",
 		"destination": 0
 	},
@@ -553,7 +553,7 @@
 		"positionx": 7,
 		"positiony": 6,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/6-7.png",
 		"destination": 0
 	},
@@ -562,7 +562,7 @@
 		"positionx": 8,
 		"positiony": 6,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/6-8.png",
 		"destination": 0
 	},
@@ -571,7 +571,7 @@
 		"positionx": 9,
 		"positiony": 6,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/6-9.png",
 		"destination": 0
 	},
@@ -580,7 +580,7 @@
 		"positionx": 10,
 		"positiony": 6,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/6-10.png",
 		"destination": 0
 	},
@@ -589,7 +589,7 @@
 		"positionx": 11,
 		"positiony": 6,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/6-11.png",
 		"destination": 0
 	},
@@ -598,7 +598,7 @@
 		"positionx": 1,
 		"positiony": 7,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/7-1.png",
 		"destination": 0
 	},
@@ -607,7 +607,7 @@
 		"positionx": 2,
 		"positiony": 7,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/7-2.png",
 		"destination": 0
 	},
@@ -616,7 +616,7 @@
 		"positionx": 3,
 		"positiony": 7,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/7-3.png",
 		"destination": 0
 	},
@@ -625,7 +625,7 @@
 		"positionx": 4,
 		"positiony": 7,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/7-4.png",
 		"destination": 0
 	},
@@ -634,7 +634,7 @@
 		"positionx": 5,
 		"positiony": 7,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/7-5.png",
 		"destination": 0
 	},
@@ -643,7 +643,7 @@
 		"positionx": 6,
 		"positiony": 7,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/7-6.png",
 		"destination": 0
 	},
@@ -652,7 +652,7 @@
 		"positionx": 7,
 		"positiony": 7,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/7-7.png",
 		"destination": 0
 	},
@@ -661,7 +661,7 @@
 		"positionx": 8,
 		"positiony": 7,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/7-8.png",
 		"destination": 0
 	},
@@ -670,7 +670,7 @@
 		"positionx": 9,
 		"positiony": 7,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/7-9.png",
 		"destination": 0
 	},
@@ -679,7 +679,7 @@
 		"positionx": 10,
 		"positiony": 7,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/7-10.png",
 		"destination": 0
 	},
@@ -688,7 +688,7 @@
 		"positionx": 11,
 		"positiony": 7,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/7-11.png",
 		"destination": 0
 	},
@@ -697,7 +697,7 @@
 		"positionx": 1,
 		"positiony": 8,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/8-1.png",
 		"destination": 0
 	},
@@ -706,7 +706,7 @@
 		"positionx": 2,
 		"positiony": 8,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/8-2.png",
 		"destination": 0
 	},
@@ -715,7 +715,7 @@
 		"positionx": 3,
 		"positiony": 8,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/8-3.png",
 		"destination": 0
 	},
@@ -724,7 +724,7 @@
 		"positionx": 4,
 		"positiony": 8,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/8-4.png",
 		"destination": 0
 	},
@@ -733,7 +733,7 @@
 		"positionx": 5,
 		"positiony": 8,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/8-5.png",
 		"destination": 0
 	},
@@ -742,7 +742,7 @@
 		"positionx": 6,
 		"positiony": 8,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/8-6.png",
 		"destination": 0
 	},
@@ -751,7 +751,7 @@
 		"positionx": 7,
 		"positiony": 8,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/8-7.png",
 		"destination": 0
 	},
@@ -760,7 +760,7 @@
 		"positionx": 8,
 		"positiony": 8,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/8-8.png",
 		"destination": 0
 	},
@@ -769,7 +769,7 @@
 		"positionx": 9,
 		"positiony": 8,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/8-9.png",
 		"destination": 0
 	},
@@ -778,7 +778,7 @@
 		"positionx": 10,
 		"positiony": 8,
 		"blocked": 0,
-		"message": "",
+		"message": null,
 		"image": "shop/8-10.png",
 		"destination": 0
 	},
@@ -787,7 +787,7 @@
 		"positionx": 11,
 		"positiony": 8,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/8-11.png",
 		"destination": 0
 	},
@@ -796,7 +796,7 @@
 		"positionx": 4,
 		"positiony": 9,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/black.png",
 		"destination": 5
 	},
@@ -805,7 +805,7 @@
 		"positionx": 5,
 		"positiony": 9,
 		"blocked": 1,
-		"message": "",
+		"message": null,
 		"image": "shop/black.png",
 		"destination": 5
 	}
