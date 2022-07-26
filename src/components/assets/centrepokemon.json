@@ -220,7 +220,7 @@
 		"positionx": 10,
 		"positiony": 1,
 		"blocked": 1,
-		"message": "Cet ordinateur est hors d'usage.",
+		"message": "Cet ordinateur est hors d'usage. Il a plus de 25 ans !",
 		"image": "pc/2-11.png",
 		"destination": 0
 	},
