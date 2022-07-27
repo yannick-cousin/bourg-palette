@@ -7,7 +7,7 @@ import Grid from './components/Grid';
 import { useState, useEffect } from 'react';
 import './App.css';
 
-function App() {
+const App = () => {
 	const [positionX, setPositionX] = useState(0); //position X du joueur
 	const [positionY, setPositionY] = useState(0); //position Y du joueur
 	const [selectPositionX, setSelectPositionX] = useState(0); //utiliser lors des tests
@@ -322,6 +322,6 @@ function App() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default App;
