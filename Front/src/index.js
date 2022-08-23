@@ -1,11 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import * as ReactDOMClient from 'react-dom/client';
 import './components/styles/PokemonClassic.ttf';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = ReactDOMClient.createRoot(container);
+
+root.render(
 	<React.StrictMode>
 		<App />
 	</React.StrictMode>,
